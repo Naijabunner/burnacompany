@@ -16,22 +16,35 @@ const tabs = [
 
 const Features = () => {
     const [activeTab,setActiveTab] = useState("All")
-    const filterData = activeTab === "All" ? data : data.filter((item)=> item.keyword === activeTab)
+    console.log(activeTab);
+    const filterData =
+      activeTab === "All"
+        ? data
+        : data.filter((item) => {
+            console.log(item.keyword);
+            return item.keyword.toLowerCase() === activeTab.toLowerCase();
+          });
   return (
-    <section className="max-w-screen-2xl mx-20 max-md:px-10   h-screen max-h-[650px]">
+    <section className="mx-20 max-md:px-10   h-screen max-h-[650px]">
       <div>
-        <h1 className="font-bold text-2xl">Choose your area of interest</h1>
-        <div>
+        <h3 className="font-bold text-3xl">Choose your area of interest</h3>
+        <div className='mb-10'>
           <NavigationTab
             tabs={tabs}
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
         </div>
-        <div>
-          {filterData.map((item) => (
-            <div key={item.keyword}>
-              <Tools keyword={item.keyword} title={item.title} description={item.description} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filterData.map((item,index) => (
+            <div key={index}>
+              <Tools
+                keyword={item.keyword}
+                title={item.title}
+                description={item.description}
+                learn={item.learn}
+                tools={item.tools}
+              />
             </div>
           ))}
         </div>
