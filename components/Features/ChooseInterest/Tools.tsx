@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/navigation';
 type toolItems = {
     keyword: string,
     title:string,
@@ -8,8 +9,13 @@ type toolItems = {
 }
 
 const Tools:React.FC<toolItems> = ({title, description,learn,tools}) => {
+  const router = useRouter()
+
+  const handleNavigation = () =>{
+   router.push(`/features/${title}`)
+  }
 return (
-  <section className="border border-[#d1d4db] justify-center min-h-60 px-5 py-6 rounded-lg cursor-pointer hover:shadow-2xl group transition-shadow">
+  <section onClick={handleNavigation} className="border border-[#d1d4db] justify-center min-h-60 px-5 py-6 rounded-lg cursor-pointer hover:shadow-2xl group transition-shadow">
     <h3 className="font-bold text-2xl mb-5 group-hover:text-primary">
       {title}
     </h3>

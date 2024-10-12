@@ -6,7 +6,6 @@ import Tools from './Tools'
 import Card from '@/components/Features/ChooseInterest/Card'
 import{ data }from '@/lib/data'
 import FooterF from '../Footer/Footer'
-
 const companyLinks = [
   'About Us',
   'Contact us',
