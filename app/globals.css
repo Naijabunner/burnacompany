@@ -89,3 +89,6 @@ body {
   clip-path: polygon(0 0, 59% 0, 60% 0%, 100% 0, 100% 38%, 56% 34%, 0 59%);
 
 }
+.important-hover-text-red {
+  @apply hover:text-[#3c1baa] !important;
+}

@@ -1,9 +1,14 @@
+import ginger from '@/Assets/shared/create-content.svg'
+import ginger1 from '@/Assets/shared/keyword-overview.svg'
+import ginger2 from '@/Assets/shared/seo-content-template.svg'
+import ginger3 from '@/Assets/shared/topic-research.svg'
 interface dataItem  {
     keyword: string,
     title: string,
     description: string
     learn: string
     tools: string
+    image?: string
 }
 
 export const data: dataItem[] = [
@@ -12,7 +17,8 @@ export const data: dataItem[] = [
         title: "Keyword Research ",
         description: "Bring traffic to your site by finding the best keywords",
          learn: "Learn more",
-         tools: "6 tools"
+         tools: "6 tools",
+         image: ginger
             
     },
     {
@@ -20,21 +26,24 @@ export const data: dataItem[] = [
         title: "On-page SEO ",
         description: "Get new ideas to improve your site’s health and SEO performance",
          learn: "Learn more",
-         tools: "3 tools"
+         tools: "3 tools",
+         image:ginger1
     },
     {
         keyword: "SEO",
         title: "Local SEO",
         description: " Optimize your site for local searches to get more customers in your area",
         learn: "Learn more",
-        tools: "6 tools"
+        tools: "6 tools",
+        image: ginger2
     },
     {
         keyword: "SEO",
         title: "Rank Tracking ",
         description: "Track daily changes of your target keywords in your target location",
         learn: "Learn more",
-        tools: "4 tools"
+        tools: "4 tools",
+        image: ginger3
     },
     {
         keyword: "SEO",
