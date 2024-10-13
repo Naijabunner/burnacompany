@@ -3,9 +3,9 @@ import Features from '@/components/Features/ChooseInterest/Features'
 
 const pages = () => {
   return (
-    <div>
+    <section>
       <Features/>
-    </div>
+    </section>
   )
 }
 
