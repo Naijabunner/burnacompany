@@ -3,17 +3,17 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section className=' max-w-screen-2xl mx-auto max-md:px-10 flex justify-center items-center  h-screen max-h-[650px]'>
-      <div className="hero w-full max-w-[1200px] mx-auto  grid lg:grid-cols-[45%,51%] gap-10">
- <div className='text max-w-[640px] mx-auto space-y-5 '>
-        <h1 className=' text-6xl font-semibold leading-[60px]'>Boost your website Camping with10x SEO Data</h1>
-        <p className=' font-medium text-xl opacity-75'>Your Full Stack digital marketing expirience in one place.</p>
+    <section className=' max-w-screen-2xl mx-auto max-md:px-10 flex justify-center items-center min-h-fit  h-[85vh] max-h-[700px] md:max-h-[650px]'>
+      <div className="hero w-full max-w-[1100px] mx-auto  grid lg:grid-cols-[55%,41%] gap-20">
+ <div className='text max-w-[640px] mx-auto space-y-1'>
+        <h1 className='text-5xl md:text-6xl font-bold leading-[60px] md:leading-[80px] '>Boost your website Camping with10x SEO Data</h1>
+        <p className=' font-medium text-lg md:text-xl opacity-60'>Your Full Stack digital marketing expirience in one place.</p>
 
         <div className='btns flex flex-col justify-center items-center gap-5 pt-5 '>
           <div className="input_container h-14 px-7  w-full rounded-full border border-black bg-white">
           <input type='text' placeholder='Enter domain, Keywork, Url' className='text-xl font-light flex-1 w-full h-full outline-none bg-transparent' />
           </div>
-          <button className='flex justify-center items-center bg-foreground text-white flex-1 w-full  py-5 px-2 rounded-full'>
+          <button className='flex bg-primary justify-center items-center shadow-md text-white flex-1 w-full  py-5 px-2 rounded-full'>
             Get started <ArrowRight />
           </button>
           <p>Get your web analysis in minutes</p>

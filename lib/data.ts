@@ -130,3 +130,11 @@ export const data: dataItem[] = [
         tools: "1 tool" 
     },
 ]
+
+
+export const categories:string[]=[
+    "Catgory",
+    "Catgory",
+    "Catgory",
+    "Catgory",
+]
