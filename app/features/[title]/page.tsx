@@ -1,3 +1,11 @@
+import ContainerTools from "@/components/Features/containerTools/ContainerTools";
+
 export default function page (){
-    return <div>Gingerf </div>
+    
+
+    return (
+        <section>
+            <ContainerTools/>
+        </section>
+    )
 }
