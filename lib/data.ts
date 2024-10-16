@@ -147,3 +147,25 @@ export const categories:string[]=[
     "Catgory",
     "Catgory",
 ]
+
+export const companyLinks = [
+    'About Us',
+    'Contact us',
+    'Partner program',
+    'Career'
+  ]
+ export const pricingLinks = [
+    'About Us',
+    'Contact us',
+    'Partner program',
+    'Career'
+  ]
+  
+ export const tabs = [
+      {name: "All", width:"9.7rem"},
+      {name: "SEO", width:"9.7rem"},
+      {name: "Content", width:"9.7rem"},
+      {name: "Market Research", width:"9.7rem"},
+      {name: "Advertising", width:"9.7rem"},
+      {name: "Social Media", width:"9.7rem"}
+  ]

@@ -63,15 +63,15 @@ const BannerCarousel = () => {
       >
         <div className='carousel_bar text-gray-200   '>
         {/* SEO */}
-          <p onClick={()=>setImageIndex(0)} className='1 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
+          <button onClick={()=>setImageIndex(0)} className='1 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
             <Image src={SEO} alt="" className="ease hover:grayscale-0 aspect-square w-[50px] cursor-pointer hover:text-[var(--zoso-text-dark-blue)]" />
             SEO
             <p
               className='line1 ease bg-gray-500'
               style={{ width: "100%", height: "2px", borderRadius: "50px" }}
             />
-          </p>
-          <p onClick={()=>setImageIndex(1)} className='2 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)] '>
+          </button>
+          <button onClick={()=>setImageIndex(1)} className='2 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)] '>
           <Image src={CA} alt="" className="ease hover:grayscale-0 aspect-square w-[50px] cursor-pointer hover:text-[var(--zoso-text-dark-blue)]" />
 
             Content Marketing
@@ -79,39 +79,39 @@ const BannerCarousel = () => {
               className='line ease bg-gray-500'
               style={{ width: "100%", height: "2px", borderRadius: "50px" }}
             />
-          </p>
-          <p onClick={()=>setImageIndex(2)} className='3 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
+          </button>
+          <button onClick={()=>setImageIndex(2)} className='3 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
           <Image src={MR} alt="" className="ease hover:grayscale-0 aspect-square w-[50px] cursor-pointer hover:text-[var(--zoso-text-dark-blue)]" />
             Market Research
             <p
               className='line ease bg-gray-500'
               style={{ width: "100%", height: "2px", borderRadius: "50px" }}
             />
-          </p>
-          <p onClick={()=>setImageIndex(3)} className='4 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
+          </button>
+          <button onClick={()=>setImageIndex(3)} className='4 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
           <Image src={AD} alt="" className="ease hover:grayscale-0 aspect-square w-[50px] cursor-pointer hover:text-[var(--zoso-text-dark-blue)]" />
             Advertising
             <p
               className='line ease bg-gray-500'
               style={{ width: "100%", height: "2px", borderRadius: "50px" }}
             />
-          </p>
-          <p onClick={()=>setImageIndex(4)} className='5 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
+          </button>
+          <button onClick={()=>setImageIndex(4)} className='5 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
           <Image src={SM} alt="" className="ease hover:grayscale-0 aspect-square w-[50px] cursor-pointer hover:text-[var(--zoso-text-dark-blue)]" />
             Social Media
             <p
               className='line ease bg-gray-500'
               style={{ width: "100%", height: "2px", borderRadius: "50px" }}
             />
-          </p>
-          <p onClick={()=>setImageIndex(5)} className='6 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
+          </button>
+          <button onClick={()=>setImageIndex(5)} className='6 text-gray-500 space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-[var(--zoso-text-dark-blue)]'>
           <Image src={AS} alt="" className="ease hover:grayscale-0 aspect-square w-[50px] cursor-pointer hover:text-[var(--zoso-text-dark-blue)]" />
             Agency Solutions
             <p
               className='line ease bg-gray-500'
               style={{ width: "100%", height: "2px", borderRadius: "50px" }}
             />
-          </p>
+          </button>
 
         </div>
         <div

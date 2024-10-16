@@ -4,29 +4,8 @@ import React, { useState } from 'react'
 import NavigationTab from './NavigationTab'
 import Tools from './Tools'
 import Card from '@/components/Features/ChooseInterest/Card'
-import{ data }from '@/lib/data'
-import FooterF from '../Footer/Footer'
-const companyLinks = [
-  'About Us',
-  'Contact us',
-  'Partner program',
-  'Career'
-]
-const pricingLinks = [
-  'About Us',
-  'Contact us',
-  'Partner program',
-  'Career'
-]
+import{ data, tabs }from '@/lib/data'
 
-const tabs = [
-    {name: "All", width:"9.7rem"},
-    {name: "SEO", width:"9.7rem"},
-    {name: "Content", width:"9.7rem"},
-    {name: "Market Research", width:"9.7rem"},
-    {name: "Advertising", width:"9.7rem"},
-    {name: "Social Media", width:"9.7rem"}
-]
 
 
 const Features = () => {
@@ -40,7 +19,7 @@ const Features = () => {
             return item.keyword.toLowerCase() === activeTab.toLowerCase();
           });
   return (
-    <section className="max-md:px-10 h-screen max-h-[650px]">
+    <section className="max-md:px-10 h-screen min-h-fit ">
       <div className="mx-20">
         <h3 className="font-bold text-3xl">Choose your area of interest</h3>
         <div className="mb-10">
@@ -65,7 +44,6 @@ const Features = () => {
         </div>
         <Card />
       </div>
-      <FooterF companyLinks={companyLinks} pricingLinks={pricingLinks} />
     </section>
   );
 }
