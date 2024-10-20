@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NavbarComponent } from "@/components/navbar";
-import { Gothic_A1,Anuphan } from 'next/font/google';
+import { Gothic_A1 } from 'next/font/google';
+import Footer from "@/components/Features/Footer/Footer";
+import { companyLinks, pricingLinks } from "@/lib/data";
 
 const gothicA1 = Gothic_A1({
   subsets:['latin'],
@@ -33,10 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gothicA1.className} antialiased`}
+        className={`${gothicA1.className}  antialiased`}
       >
         <NavbarComponent/>
         {children}
+        <Footer companyLinks={companyLinks} pricingLinks={pricingLinks} />
       </body>
     </html>
   );
