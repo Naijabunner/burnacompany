@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
 import testImage from '@/Assets/Rectangle 38.jpg'
+import { useRouter } from 'next/navigation'
 const page = () => {
+  const router = useRouter()
+
+  const handleNavigation = () => {
+     router.push(`/features/${}`);
+  }
   return (
     <div>
 
