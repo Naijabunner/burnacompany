@@ -43,7 +43,7 @@ const BannerCarousel = () => {
 //   };
   return (
     <section
-      className='bannerSection'
+      className='bannerSection bg-violet-50'
       style={{
         width: "100%",
         paddingTop: "100px",

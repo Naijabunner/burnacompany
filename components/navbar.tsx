@@ -14,12 +14,12 @@ export function NavbarComponent() {
       {/* logo for small screen  */}
       {/* responsiveness break is lg */}
       <Link href="/" className="text-2xl font-bold text-indigo-600 mr-4 lg:hidden">
-          FuzionDot
+          NAME
         </Link>
         {/* logo and navItems for large screen */}
       <div className="flex items-center space-x-5  max-lg:hidden ">
         <Link href="/" className="text-2xl font-bold text-indigo-600 ">
-          FuzionDot
+          NAME
         </Link>
         <NavItem title="Services" items={["Feature 1", "Feature 2", "Feature 3"]} />
         <NavItem title="Features" href="/enterprise"/>

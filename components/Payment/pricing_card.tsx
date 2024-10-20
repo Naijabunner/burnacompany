@@ -3,12 +3,12 @@ import React from 'react'
 const Pricing_card = () => {
   return (
 
-<div className="rounded-2xl shadow-lg p-3 bg-indigo-500 text-gray-600 max-w-xs">
+<div className="rounded-2xl shadow-lg p-3 bg-primary text-gray-600 max-w-xs">
   <div
-    className="relative flex flex-col items-center p-5 pt-10 bg-blue-100 rounded-xl"
+    className="relative flex flex-col items-center p-5 pt-10 bg-violet-100 rounded-xl"
   >
     <span
-      className="mt-[-12px] absolute top-0 right-0 flex items-center bg-indigo-500 rounded-l-full py-2 px-3 text-xl font-semibold text-amber-100"
+      className="mt-[-12px] absolute top-0 right-0 flex items-center bg-primary rounded-l-full py-2 px-3 text-xl font-semibold text-amber-100"
     >
       $49 <small className="text-xs ml-1 text-white">/ month</small>
     </span>
@@ -87,7 +87,7 @@ const Pricing_card = () => {
     </ul>
     <div className="w-full flex justify-end mt-6">
       <a
-        className="w-full py-3 text-center text-white bg-indigo-600 rounded-lg font-medium text-lg hover:bg-indigo-700 focus:outline-none"
+        className="w-full py-3 text-center text-white bg-primary rounded-lg font-medium text-lg hover:bg-indigo-700 focus:outline-none"
         href="#"
       >
         Choose plan
