@@ -12,7 +12,8 @@ function RelatedInterest(){
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           {slice.map((item, index) => (
             <section
-              className="border border-[#d1d4db] justify-center min-h-60 px-5 py-6 rounded-lg cursor-pointer hover:shadow-2xl group transition-shadow hover:border-none"
+            key={index}
+              className="border border-[#d1d4db] justify-center min-h-60 px-5 py-6 rounded-lg cursor-pointer hover:shadow-2xl group transition-shadow duration-500 hover:border-none"
             >
               <h3 className="font-bold text-2xl mb-5 group-hover:text-primary important-hover-text-red">
                 {item.title}

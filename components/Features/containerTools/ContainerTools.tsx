@@ -1,4 +1,3 @@
-import { section } from "framer-motion/client";
 import Card from "../ChooseInterest/Card";
 import Footer from "../Footer/Footer";
 import Hero from "../Hero";

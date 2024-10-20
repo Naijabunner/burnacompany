@@ -22,7 +22,7 @@ export function NavbarComponent() {
           NAME
         </Link>
         <NavItem title="Services" items={["Feature 1", "Feature 2", "Feature 3"]} />
-        <NavItem title="Features" href="/enterprise"/>
+        <NavItem title="Features" href="/features"/>
         <NavItem title="Our Company" items={["Resource 1", "Resource 2", "Resource 3"]} />
         <NavItem title="Pricing" href="/enterprise" />
         <NavItem title="Our Data" href="/pricing" />

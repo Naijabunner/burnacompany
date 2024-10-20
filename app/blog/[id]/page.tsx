@@ -1,8 +1,10 @@
-import React from 'react'
+import BlogComponent from "@/components/Blog/BlogComponent"
 
 const page = () => {
   return (
-    <section>dffdfddfdffd</section>
+    <section>
+      <BlogComponent/>
+    </section>
   )
 }
 
