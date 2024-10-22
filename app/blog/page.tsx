@@ -10,7 +10,6 @@ const page = () => {
   // }
   return (
     <div>
-
       <div className='section'>
          <main className='gap-10 max-sm:mx-5 max-w-screen-xl mx-auto flex justify-center items-center flex-wrap'>
         <div className='bog_card max-w-[392px] gap-y-5 grid grid-rows-[55%,45%] p-3 rounded-xl border-2 shadow-md hover:scale-[1.02] transition ease-linear shadow-gray-200 border-gray-200'>
