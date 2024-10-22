@@ -184,8 +184,7 @@ margin-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
    justify-content: space-between;
-   gap: 20px;
-   
+   gap: 20px;   
 }
 .carousel_bar p{
   width:100%;
@@ -195,6 +194,7 @@ margin-left: 30px;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  
 }
 .carousel_bar .ease:hover .line1{
   background: var(--primary);
@@ -230,20 +230,23 @@ margin-left: 30px;
 }
 
 .item1 {
-  animation-delay: calc(10s / 4 * (4 - 1) * 1);
+  animation-delay: calc(10s / 5 * (5 - 1) * 1);
 }
 
 .item2 {
-  animation-delay: calc(10s / 4 * (4 - 2) * 1);
+  animation-delay: calc(10s / 5 * (5 - 2) * 1);
 
 }
 
 .item3 {
-  animation-delay: calc(10s / 4 * (4 - 3) * 1);
+  animation-delay: calc(10s / 5 * (5 - 3) * 1);
 }
 
 .item4 {
-  animation-delay: calc(10s / 4 * (4 - 4) * 1);
+  animation-delay: calc(10s / 5 * (5 - 4) * 1);
+}
+.item5 {
+  animation-delay: calc(10s / 5 * (5 - 5) * 1);
 }
 
 @keyframes scroll {
