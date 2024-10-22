@@ -23,11 +23,11 @@ import Image from "next/image";
 
 const GetInTouchColumn = () => {
   return (
-    <nav className="flex flex-col">
+    <nav className="flex flex-col w-72">
       <h2 className="text-2xl font-bold">
         Get In Touch
       </h2>
-      <ul className="flex flex-col mt-7 text-base font-medium leading-8">
+      <ul className="flex flex-col ">
         {GetInTouch.map((link, index) => (
           <div
             key={index}
@@ -35,7 +35,7 @@ const GetInTouchColumn = () => {
           >
             {/* Since the image is StaticImageData, the src prop will work */}
             <Image src={link.image} alt="icon" width={20} height={20} />
-            <p className="ml-3">
+            <p className="ml-3 text-sm mt-3">
               {link.details}
             </p>
           </div>

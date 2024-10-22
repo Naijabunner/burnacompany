@@ -9,16 +9,16 @@ interface FooterColumnProps {
 
 const FooterColumn: React.FC<FooterColumnProps> = ({ title, links, image }) => {
   return (
-    <nav className="flex flex-col">
+    <nav className="flex flex-col w-58">
       <h2 className="text-2xl font-bold  ">
         {title}
       </h2>
-      <ul className="flex flex-col mt-7 text-base font-medium leading-8">
+      <ul className="flex flex-col">
         {links.map((link, index) => (
           <div key={index}>
             {image && <Image src={image} alt="icon" width={20} height={20} />}
-            <li>
-              <a href="#">{link}</a>
+            <li className="">
+              <p className="text-sm mt-5">{link}</p>
             </li>
           </div>
         ))}
