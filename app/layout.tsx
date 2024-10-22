@@ -3,7 +3,7 @@ import "./globals.css";
 import { NavbarComponent } from "@/components/navbar";
 import { Gothic_A1 } from 'next/font/google';
 import Footer from "@/components/Features/Footer/Footer";
-import { companyLinks, pricingLinks } from "@/lib/data";
+import { companyLinks, CommunityLinks} from "@/lib/data";
 
 const gothicA1 = Gothic_A1({
   subsets:['latin'],
@@ -34,12 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${gothicA1.className}  antialiased`}
-      >
-        <NavbarComponent/>
+      <body className={`${gothicA1.className}  antialiased`}>
+        <NavbarComponent />
         {children}
-        <Footer companyLinks={companyLinks} pricingLinks={pricingLinks} />
+        <Footer companyLinks={companyLinks} CommunityLinks={CommunityLinks}  />
       </body>
     </html>
   );

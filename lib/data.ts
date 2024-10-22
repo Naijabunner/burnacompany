@@ -2,6 +2,10 @@ import ginger from '@/Assets/shared/create-content.svg'
 import ginger1 from '@/Assets/shared/keyword-overview.svg'
 import ginger2 from '@/Assets/shared/seo-content-template.svg'
 import ginger3 from '@/Assets/shared/topic-research.svg'
+import location from '@/Assets/shared/icons8-location-24.png'
+import message from '@/Assets/shared/icons8-message-50.png'
+import telephone from '@/Assets/shared/icons8-telephone-32.png'
+import { StaticImageData } from 'next/image'
 interface dataItem  {
     keyword: string,
     title: string,
@@ -11,6 +15,10 @@ interface dataItem  {
     image?: string
 }
 
+interface GetInTouch {
+    details: string,
+    image: StaticImageData
+}
 export const data: dataItem[] = [
     {
         keyword: "SEO",
@@ -149,17 +157,36 @@ export const categories:string[]=[
 ]
 
 export const companyLinks = [
-    'About Us',
-    'Contact us',
-    'Partner program',
-    'Career'
+    'Popular Service',
+    'Team Members',
+    'Privacy & Setting',
+    'Pricing Package'
   ]
- export const pricingLinks = [
-    'About Us',
-    'Contact us',
-    'Partner program',
-    'Career'
+ export const CommunityLinks = [
+    'Company overview',
+    'Teams',
+    'Careers',
+    'Testimonals',
+    'Core Traits'
   ]
+
+//   export const GetInTouch:GetInTouch[] = [
+//   {
+//     details: '55 Main Street block Malborne, Australia',
+//     image: location,
+//   },
+//   {
+//     details: 'support@gmail.com',
+//     image: message,
+//   },
+//   {
+//     details: '+000 (123)456 88',
+//     image: telephone,
+//   },
+// ];
+
+    
+  
   
  export const tabs = [
       {name: "All", width:"9.7rem"},

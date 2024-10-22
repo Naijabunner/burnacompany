@@ -4,7 +4,7 @@ export default function page (){
     
 
     return (
-        <section>
+        <section className="max-w-[90rem] mx-auto">
             <ContainerTools/>
         </section>
     )

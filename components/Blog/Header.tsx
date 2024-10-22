@@ -6,19 +6,28 @@ type HeaderProps = {
     author: string;
     date: string;
     image?: string;
-    article: string;
+    article: string[];
 }
 
 const Header: React.FC<HeaderProps> = ({ title, author, date, image, article }) => {
   return (
-    <header>
-      <div>
-        <h1>{title}</h1>
-        <span>{author}</span>
-        <span>{date}</span>
+    <header className="flex flex-col gap-4">
+      <div className="flex flex-col gap-5">
+        <h1 className="font-bold text-2xl">{title}</h1>
+        <div className="flex gap-2 text-[#696A75]">
+          <span>{author}</span>
+          <span>{date}</span>
+        </div>
       </div>
-      <Image src={image || headerImage} alt="Header image" width={50} height={50} />
-      <p>{article}</p>
+      <Image
+        src={image || headerImage}
+        alt="Header image"
+        width={850}
+        height={850}
+      />
+       {article.map((paragraph,index)=> (
+        <p key={index}>{paragraph}</p>
+       ))}
     </header>
   );
 }
