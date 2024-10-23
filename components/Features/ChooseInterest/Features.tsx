@@ -5,6 +5,7 @@ import NavigationTab from './NavigationTab'
 import Tools from './Tools'
 import Card from '@/components/Features/ChooseInterest/Card'
 import{ data, tabs }from '@/lib/data'
+import Hero from '../Hero'
 
 
 
@@ -21,6 +22,7 @@ const Features = () => {
   return (
     <section className="max-md:px-10 h-screen min-h-fit">
       <div className="mx-20">
+        <Hero title='Ginger' inside='the Guy' description='There was a boy named ginger and he was handsome'/>
         <h3 className="font-bold text-3xl">Choose your area of interest</h3>
         <div className="mb-10">
           <NavigationTab
