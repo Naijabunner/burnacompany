@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import testImage from '@/Assets/Rectangle 38.jpg'
-import CategoryIndicator from '@/components/Blog/categoryIndicator'
+import DisplayLayoutOne from '@/components/Blog/displayLayoutOne'
 // import { useRouter } from 'next/navigation'
 const page = () => {
   // const router = useRouter()
@@ -29,7 +28,7 @@ const page = () => {
      }
    ]
   return (
-    <section className=' py-10 md:py-20 max-w-screen-xl bg-green-300 mx-auto max-sm:mx-[5%]  max-md:mx-10'>
+    <section className=' py-10 md:py-20 max-w-[1080px] mx-auto max-sm:mx-[5%]  max-md:mx-5'>
       <header className=' flex justify-center gap-5 items-center px-2 flex-wrap'>  
       {
         categories.map((category)=>{
@@ -42,29 +41,8 @@ const page = () => {
       }
       </header>
       <main>
-        <div className="cardOne">
-          <Image
-          src={}
-          alt=''
-          />
-          <div className="">
-            <CategoryIndicator category='Advert'/>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing.
-            </p>
-            <p>
-              <span>
-                Jane Smith
-                </span>
-                <span>
-                  May 15, 2021
-                  </span>
-                  <span>
-                    2 min
-                  </span>
-            </p>
-          </div>
-        </div>
+       <DisplayLayoutOne/>
+        
       </main>
     </section>
   );
