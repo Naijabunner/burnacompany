@@ -18,7 +18,11 @@ const NavigationTab: React.FC<Tabs>= ({tabs,activeTab,setActiveTab}) => {
         <div
           key={tab.name}
           style={{ width: tab.width }}
-          className={`${tab.name === activeTab ? "bg-primary text-white " : ""}  text-base border cursor-pointer  rounded-full py-2   flex justify-center`}
+          className={`${
+            tab.name === activeTab
+              ? "bg-primary text-white "
+              : "hover:bg-light hover:text-white "
+          }  text-base border cursor-pointer  rounded-full py-2  flex justify-center`}
           onClick={() => setActiveTab(tab.name)}
         >
           {tab.name}
