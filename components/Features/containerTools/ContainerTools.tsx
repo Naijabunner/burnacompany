@@ -1,11 +1,8 @@
 import Card from "../ChooseInterest/Card";
-import Footer from "../Footer/Footer";
 import Hero from "../Hero";
 import RelatedInterest from "./RelatedInterest";
 import ToolsTwo from "./ToolTwo";
 
-const companyLinks = ["About Us", "Contact us", "Partner program", "Career"];
-const pricingLinks = ["About Us", "Contact us", "Partner program", "Career"];
 function ContainerTools (){
     return (
       <section>
@@ -17,7 +14,6 @@ function ContainerTools (){
             <RelatedInterest/>
           </div>
         </div>
-        <Footer companyLinks={companyLinks} pricingLinks={pricingLinks} />
       </section>
     );
 }

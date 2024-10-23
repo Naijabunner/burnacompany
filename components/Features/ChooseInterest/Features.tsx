@@ -19,7 +19,7 @@ const Features = () => {
             return item.keyword.toLowerCase() === activeTab.toLowerCase();
           });
   return (
-    <section className="max-md:px-10 h-screen min-h-fit ">
+    <section className="max-md:px-10 h-screen min-h-fit">
       <div className="mx-20">
         <h3 className="font-bold text-3xl">Choose your area of interest</h3>
         <div className="mb-10">

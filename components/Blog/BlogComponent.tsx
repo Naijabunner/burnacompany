@@ -1,15 +1,47 @@
-// import Article from "./Article";
-import Header from "./Header";
+import Article from "./Article"
+import Header from "./Header"
+import headerImage from "@/Assets/shared/Image.png"; 
+const BlogComponent = () =>{
+    return (
+      <section className="flex flex-col w-[50rem] mx-auto gap-8">
+        <Header
+          title="The Impact of Technology on the Workplace: How Technology is Changing"
+          author="Tracey Wilson"
+          date="August 20, 2022"
+          article={[
+            "Traveling is an enriching experience that opens up new horizons, exposes us to different cultures, and creates memories that last a lifetime. However, traveling can also be stressful and overwhelming, especially if you don't plan and prepare adequately. In this blog article, we'll explore tips and tricks for a memorable journey and how to make the most of your travels.",
 
-const BlogComponent = () => {
-  return (
-    <Header
-      title='The Impact of Technology on the Workplace: How Technology is Changing'
-      author='Tracey Wilson'
-      date='August 20, 2022'
-      article="Traveling is an enriching experience that opens up new horizons, exposes us to different cultures, and creates memories that last a lifetime. However, traveling can also be stressful and overwhelming, especially if you don't plan and prepare adequately. In this blog article, we'll explore tips and tricks for a memorable journey and how to make the most of your travels.
-One of the most rewarding aspects of traveling is immersing yourself in the local culture and customs. This includes trying local cuisine, attending cultural events and festivals, and interacting with locals. Learning a few phrases in the local language can also go a long way in making connections and showing respect."
-    />
-  );
-};
-export default BlogComponent;
+            "One of the most rewarding aspects of traveling is immersing yourself in the local culture and customs. This includes trying local cuisine, attending cultural events and festivals, and interacting with locals. Learning a few phrases in the local language can also go a long way in making connections and showing respect.",
+          ]}
+        />
+
+        <Article
+          title="Research Your Destination"
+          article={[
+            "Before embarking on your journey, take the time to research your destination. This includes understanding the local culture, customs, and laws, as well as identifying top attractions, restaurants, and accommodations. Doing so will help you navigate your destination with confidence and avoid any cultural faux pas.",
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Viverra adipiscing at in tellus.",
+          ]}
+        />
+        <Article
+          title="Research Your Destination"
+          article={[
+            "Before embarking on your journey, take the time to research your destination. This includes understanding the local culture, customs, and laws, as well as identifying top attractions, restaurants, and accommodations. Doing so will help you navigate your destination with confidence and avoid any cultural faux pas.",
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Viverra adipiscing at in tellus.",
+          ]}
+          quote="“ Traveling can expose you to new environments and potential health risks, so it's crucial to take precautions to stay safe and healthy. ”"
+          image={headerImage}
+        />
+        <Article
+          title="Research Your Destination"
+          article={[
+            "Before embarking on your journey, take the time to research your destination. This includes understanding the local culture, customs, and laws, as well as identifying top attractions, restaurants, and accommodations. Doing so will help you navigate your destination with confidence and avoid any cultural faux pas.",
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Viverra adipiscing at in tellus.",
+          ]}
+        />
+      </section>
+    );
+}
+export default BlogComponent

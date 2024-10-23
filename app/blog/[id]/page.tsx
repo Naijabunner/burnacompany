@@ -2,7 +2,7 @@ import BlogComponent from "@/components/Blog/BlogComponent"
 
 const page = () => {
   return (
-    <section>
+    <section className="">
       <BlogComponent/>
     </section>
   )
