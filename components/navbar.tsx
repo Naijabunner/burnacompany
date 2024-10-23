@@ -75,7 +75,7 @@ const navData: navs[] = [
 
 export function NavbarComponent() {
   return (
-    <nav className=' relative flex items-center justify-between px-6 py-3 md:py-6 lg:px-10 border-b max-w-screen-2xl mx-auto '>
+    <nav className=' bg-white flex items-center justify-between px-6 py-3 md:py-6 lg:px-10 border-b max-w-screen-2xl mx-auto '>
       {/* logo for small screen  */}
       {/* responsiveness break is lg */}
       <Link href='/' className='text-2xl font-bold mr-4 lg:hidden'>
