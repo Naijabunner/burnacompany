@@ -5,7 +5,8 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
+    "allowJs": true,         // Allow JavaScript files
+    "checkJs": false, 
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
@@ -33,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "actions/login.tsx", "components/ui/dropdown-menu.jsx"  ],
   "exclude": [
     "node_modules"
   ]
