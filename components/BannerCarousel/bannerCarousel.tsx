@@ -75,7 +75,7 @@ const BannerCarousel = () => {
         }}
         className=" mx-10 "
       >
-        <div className='carousel_bar text-gray-200   '>
+        <div className='carousel_bar text-gray-200 max-sm:hidden   '>
         {/* SEO */}
           <button onClick={()=>setImageIndex(0)} className={`1 ${imageIndex === 0 ? 'text-primary stroke-primary': 'text-gray-500 '} space-y-3 text-base text-center font-bold  ease cursor-pointer hover:text-primary flex flex-col justify-center items-center`}>
             <Image src={SEO} alt="" className="ease hover:grayscale-0 aspect-square w-[50px] cursor-pointer hover:text-primary" />

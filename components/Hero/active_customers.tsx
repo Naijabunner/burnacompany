@@ -2,8 +2,8 @@
 import React from "react";
 const Active_customers = () => {
   return (
-    <div className='overflow-hidden py-20'>
-        <h5 className=" text-2xl text-center font-semibold py-3">
+    <div className='overflow-hidden py-10 md:py-20'>
+        <h5 className=" text-2xl md:text-3xl text-center font-semibold py-3">
           Our Trusted clients
         </h5>
       <div

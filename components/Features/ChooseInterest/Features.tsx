@@ -7,7 +7,7 @@ import Card from '@/components/Features/ChooseInterest/Card'
 import{ data, tabs }from '@/lib/data'
 import Hero from '../Hero'
 
-
+const dummydesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam natus quidem asperiores, tenetur iusto harum. Fugiat sapiente repellendus id, magnam mollitia voluptas provident deleniti consequuntur maiores vitae nulla, sequi nobis!"
 
 const Features = () => {
     const [activeTab,setActiveTab] = useState("All")
@@ -20,9 +20,9 @@ const Features = () => {
             return item.keyword.toLowerCase() === activeTab.toLowerCase();
           });
   return (
-    <section className="max-md:px-10 h-screen min-h-fit">
-      <div className="mx-20">
-        <Hero title='Ginger' inside='the Guy' description='There was a boy named ginger and he was handsome'/>
+    <section className=" max-md:px-[5%] h-screen min-h-fit">
+      <div className=" md:mx-20">
+        <Hero title='Our Tools' inside="Fuziondot's" description={dummydesc}/>
         <h3 className="font-bold text-3xl">Choose your area of interest</h3>
         <div className="mb-10">
           <NavigationTab

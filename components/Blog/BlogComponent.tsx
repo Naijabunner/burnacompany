@@ -1,46 +1,47 @@
-import Article from "./Article"
-import Header from "./Header"
+import Image from "next/image";
 import headerImage from "@/Assets/shared/Image.png"; 
 const BlogComponent = () =>{
     return (
-      <section className="flex flex-col w-[50rem] mx-auto gap-8">
-        <Header
-          title="The Impact of Technology on the Workplace: How Technology is Changing"
-          author="Tracey Wilson"
-          date="August 20, 2022"
-          article={[
-            "Traveling is an enriching experience that opens up new horizons, exposes us to different cultures, and creates memories that last a lifetime. However, traveling can also be stressful and overwhelming, especially if you don't plan and prepare adequately. In this blog article, we'll explore tips and tricks for a memorable journey and how to make the most of your travels.",
+      <section className='sm:px-5 py-10 md:py-20 max-w-[1080px] space-y-5 overflow-x-hidden mx-auto max-sm:mx-[5%]  max-md:mx-5'>
+        <h1 className=" text-3xl sm:text-5xl leading-tight md:text-6xl !font-[900] md:!leading-[80px] text-zinc-800 ">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, fugit.
+        </h1>
+        <p className="  text-sm sm:text-base md:text-lg flex items-center gap-x-2 text-slate-500">
+          <span>
+            By
+            <strong className=" ml-2">Steve Grant </strong>
+          </span>
+          .
+          <span>
+          Published in 
+            <strong className=" ml-2">Advertising</strong>
+          </span>
+          .
+          <span>
+            April 16, 2020
+          </span>
+          .
+          <span className="text-primary font-semibold">
+            1 min read
+          </span>
+        </p>
 
-            "One of the most rewarding aspects of traveling is immersing yourself in the local culture and customs. This includes trying local cuisine, attending cultural events and festivals, and interacting with locals. Learning a few phrases in the local language can also go a long way in making connections and showing respect.",
-          ]}
-        />
+        <div className="grid lg:grid-cols-[77%,23%] pt-5 " >
+          <main className=" space-y-7">
+          <Image src={headerImage} alt='jsjsj'
+          className=" max-w-[700px] w-full"
+          />
 
-        <Article
-          title="Research Your Destination"
-          article={[
-            "Before embarking on your journey, take the time to research your destination. This includes understanding the local culture, customs, and laws, as well as identifying top attractions, restaurants, and accommodations. Doing so will help you navigate your destination with confidence and avoid any cultural faux pas.",
-
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Viverra adipiscing at in tellus.",
-          ]}
-        />
-        <Article
-          title="Research Your Destination"
-          article={[
-            "Before embarking on your journey, take the time to research your destination. This includes understanding the local culture, customs, and laws, as well as identifying top attractions, restaurants, and accommodations. Doing so will help you navigate your destination with confidence and avoid any cultural faux pas.",
-
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Viverra adipiscing at in tellus.",
-          ]}
-          quote="“ Traveling can expose you to new environments and potential health risks, so it's crucial to take precautions to stay safe and healthy. ”"
-          image={headerImage}
-        />
-        <Article
-          title="Research Your Destination"
-          article={[
-            "Before embarking on your journey, take the time to research your destination. This includes understanding the local culture, customs, and laws, as well as identifying top attractions, restaurants, and accommodations. Doing so will help you navigate your destination with confidence and avoid any cultural faux pas.",
-
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Viverra adipiscing at in tellus.",
-          ]}
-        />
+          <article className=" text-xl sm:text-2xl font-medium !leading-relaxed text-zinc-800">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus sapiente architecto saepe illum aliquid amet, corrupti
+            reprehenderit, nesciunt mollitia iure unde ratione quae possimus
+            consequatur voluptatum commodi eligendi sequi vitae?
+          </article>
+          </main>
+          <div className="h-full w-full bg-blue-200 max-lg:hidden">
+          </div>
+        </div>
       </section>
     );
 }

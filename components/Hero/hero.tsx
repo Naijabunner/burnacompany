@@ -1,15 +1,16 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
-
+import screenshot from '@/assets/FuziondotScreenShot.svg'
 const Hero = () => {
   return (
-    <section className=' max-w-screen-2xl mx-auto max-md:px-10 flex justify-center items-center min-h-fit  h-[85vh] max-h-[700px] md:max-h-[650px]'>
+    <section className=' max-lg:my-10 px-3 max-w-screen-2xl mx-auto max-md:px-10 flex justify-center items-center min-h-fit  h-[85vh] max-h-[700px] md:max-h-[650px]'>
       <div className='hero w-full max-w-[1100px] mx-auto  grid lg:grid-cols-[55%,41%] gap-20'>
         <div className='text max-w-[640px] mx-auto space-y-1'>
-          <h1 className='text-5xl md:text-6xl font-bold leading-[60px] md:leading-[80px] '>
+          <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold leading-[50px] sm:leading-[60px] md:leading-[80px] '>
             Boost your website Camping with10x SEO Data
           </h1>
-          <p className=' font-medium text-lg md:text-xl opacity-60'>
+          <p className=' font-medium text-base sm:text-lg md:text-xl opacity-60'>
             Your Full Stack digital marketing expirience in one place.
           </p>
 
@@ -37,7 +38,8 @@ const Hero = () => {
             <div className=' bg-slate-500 ' />
             <div className=' bg-slate-500 ' />
           </div>
-        </div>
+        </div> 
+      
       </div>
     </section>
   );

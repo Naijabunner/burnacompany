@@ -3,7 +3,7 @@ import Features from '@/components/Features/ChooseInterest/Features'
 
 const pages = () => {
   return (
-    <section className=" max-w-[90rem] mx-auto">
+    <section className=" max-w-screen-xl mx-auto">
       <Features />
     </section>
   );

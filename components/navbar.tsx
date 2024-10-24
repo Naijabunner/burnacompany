@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Hambuger from "./ui/HambugerBtn"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import logo from "@/assets/FuziondotLogoNew.svg"
 
 interface subItem{
@@ -75,31 +75,15 @@ const navData: navs[] = [
 
 export function NavbarComponent() {
   return (
-    <nav className=' bg-white flex items-center justify-between px-6 py-3 md:py-6 lg:px-10 border-b max-w-screen-2xl mx-auto '>
-      {/* logo for small screen  */}
-      {/* responsiveness break is lg */}
-      <Link href='/' className='text-2xl font-bold mr-4 lg:hidden'>
-        <Image src={logo} alt='logo' width={125} height={150} />
-      </Link>
-      {/* logo and navItems for large screen */}
-      <div className='flex items-center space-x-5  max-lg:hidden '>
-        <Link href='/' className='text-2xl font-bold mr-5'>
-          <Image src={logo} alt='logo' width={150} height={150} />
-        </Link>
+    <nav className=' bg-white flex items-center justify-between px-6 py-5 md:py-7 lg:px-10  max-w-screen-2xl mx-auto '>
+      <Logo logo={logo} />
+      <div className='flex items-center space-x-5  max-lg:hidden flex-wrap'>
         {navData.map((data, index) => {
           return <NavItem {...data} key={index} />;
         })}
-        {/* <NavItem title='Services' items={["SEO", "Feature 2", "Feature 3"]} />
-        <NavItem title='Features' href='/features' />
-        <NavItem
-          title='Our Company'
-          items={["Resource 1", "Resource 2", "Resource 3"]}
-        />
-        <NavItem title='Pricing' href='/enterprise' />
-        <NavItem title='Our Data' href='/pricing' />
-        <NavItem title='Blogs' href='/blog' /> */}
       </div>
-      <div className='flex items-center gap-x-5 '>
+      {/* others */}
+      <div className='flex items-center gap-x-5 font-semibold  '>
         <Link href={""} className='text-base max-lg:hidden'>
           Contact Sales
         </Link>
@@ -108,7 +92,7 @@ export function NavbarComponent() {
         </Link>
         <Button
           size={"sm"}
-          className=' max-sm:hidden rounded-full h-10 px-5 shadow '
+          className=' max-sm:hidden font-medium rounded-full h-10 px-5 shadow '
         >
           Sign up free →
         </Button>
@@ -117,7 +101,7 @@ export function NavbarComponent() {
       </div>
 
       {/* sidenav for smaller screens */}
-      {/* <SideNav /> */}
+    {/* <SideNav  navItems={navData}/>  */}
     </nav>
   );
 }
@@ -152,14 +136,14 @@ function NavItem({ title, href, items }: navs) {
 
   if (href) {
     return (
-      <Link href={href} className="hover:text-primary text-base text-gray-700 hover:text-gray-900">
+      <Link href={href} className="hover:text-primary font-semibold text-base text-gray-700 hover:text-gray-900">
         {title}
       </Link>
     )
   }
 
   return (
-    <div className="relative group " onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="relative group font-semibold " onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="absolute -top-6 left-0 w-full h-6  " />
       <button className="flex hover:text-primary items-center text-base  text-gray-700 ">
         {title} <ChevronDown className="w-5 h-5 ml-1" />
@@ -186,44 +170,82 @@ function NavItem({ title, href, items }: navs) {
     </div>
   )
 }
-
-
-function SideNav(){
+//logo
+function Logo({ logo }:{ logo : StaticImageData}){
   return(
-    <aside className=" z-50 absolute bg-primary min-h-screen w-[150px] sm:w-[250px] left-0 -bottom-[100vh]">
-       {/* <Link href="/" className="text-2xl font-bold mr-4 lg:hidden h-[100px] flex justify-center items-center bg">
-      <Image
-          src={logo}
-          alt="logo"
-          width={125}
-          height={150}
-          />
-        </Link> */}
-       <SideNavItems/>
+    <>
+       {/* logo for small screen  */}
+      {/* responsiveness break is lg */}
+      <Link href='/' className='text-2xl font-bold mr-4 lg:hidden'>
+        <Image src={logo} alt='logo' width={150} height={170} />
+      </Link>
+      {/* logo and navItems for large screen */}
+      <div className='flex items-center space-x-5  max-lg:hidden flex-wrap'>
+        <Link href='/' className='text-2xl font-bold mr-5'>
+          <Image src={logo} alt='logo' width={175} height={175} />
+        </Link>
+        </div>
+    </>
+  )
+}
+// side nav
+function SideNav({ navItems }: { navItems : navs[]}){
+  return(
+    <aside className=" z-50 absolute bg-white min-h-screen min-w-[200px] w-[50%]  left-0 -bottom-20 pt-2">
+       <SideNavItems items={navItems}/>
        <div className="bg-blue-500 h"></div>
     </aside>
  )
 }
-
-function SideNavItems({ items }){
+// map nav items
+// move item to its own component and it will work 
+function SideNavItems({ items }: { items : navs[]}){
   return(
     <>
-      <ul className=" my-5 mx-5 text-white text-sm">
-        <li className=" font-medium flex h-11 justify-between items-center border-b">
+      <div className=" my-5 mx-5 text-gray-700 text-sm">
+        {items.map((item)=>{
+        if (item.href) {
+          return(
+            <Link key={item.title} href={item.href} className=" font-semibold  flex h-11 justify-between items-center border-b">
+            {item.title}
+          </Link>
+          )
+        } else {
+          return (
+            <div className='relative'>
+              <button className=' font-semibold w-full  flex h-11 justify-between items-center border-b'>
+                {item.title}
+                <ChevronDown className='w-4 absolute right-5' />
+              </button>
+              <div className="  w-[90%] mx-auto -right-[80%] ">
+                {
+                  item.items?.map((sub)=>{
+                    return(
+                      <Link key={sub.title} href={sub.href} className=" font-semibold  text-xs flex h-11 justify-between items-center border-b">
+                      {sub.title}
+                    </Link>
+                    )
+                  })
+                }
+              </div>
+            </div>
+          );
+         
+        }
+        })}
+        
+        {/* <Link className=" font-semibold  flex h-11 justify-between items-center border-b">
           SEO
-        </li>
-        <li className=" font-medium flex h-11 justify-between items-center border-b">
+          <ChevronDown className="w-4 absolute right-5"/>
+        </Link>
+        <Link className=" font-semibold  flex h-11 justify-between items-center border-b">
           SEO
-          <ChevronDown className=" absolute right-5"/>
-        </li>
-        <li className=" font-medium flex h-11 justify-between items-center border-b">
+        </Link>
+        <Link className=" font-semibold  flex h-11 justify-between items-center border-b">
           SEO
-        </li>
-        <li className=" font-medium flex h-11 justify-between items-center border-b">
-          SEO
-          <ChevronDown className=" absolute right-5"/>
-        </li>
-      </ul>
+          <ChevronDown className="w-4 absolute right-5"/>
+        </Link> */}
+      </div>
     </>
   )
 }

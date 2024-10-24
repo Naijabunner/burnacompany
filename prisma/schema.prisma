@@ -1,0 +1,51 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum Category {
+  DIGITAL
+  SEO
+  CONTENT_MGT
+  TIPS
+}
+
+enum Tag {
+  RECENT
+  POPULAR
+  TRENDING
+}
+
+model Admin {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  email       String   @unique
+  password    String 
+  fullName    String
+  description String?
+  profilePicUrl String?
+  socialLinks  String[]
+  createdAt   DateTime @default(now())
+  posts       BlogPost[]
+}
+
+model BlogPost {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  category    Category
+  content     String
+  tags        Tag[]  
+  readTime    Int      
+  author      String   @default("Admin")
+  imageUrl    String
+  isArchive   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  
+  // Foreign key
+  adminId     String   @db.ObjectId
+  admin       Admin    @relation(fields: [adminId], references: [id])
+}
