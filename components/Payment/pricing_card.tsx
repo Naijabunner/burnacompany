@@ -3,7 +3,7 @@ import React from 'react'
 const Pricing_card = () => {
   return (
 
-<div className="rounded-2xl shadow-lg p-3 bg-primary text-gray-600 max-w-xs">
+<div className="rounded-2xl shadow-lg p-3 bg-primary text-gray-600 max-w-xs mx-auto">
   <div
     className="relative flex flex-col items-center p-5 pt-10 bg-violet-100 rounded-xl"
   >

@@ -1,6 +1,6 @@
 'use client'
 
-import * as React from "react"
+import React, { useEffect, useRef, useState } from 'react'
 import Link from "next/link"
 import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -8,13 +8,14 @@ import { Button } from "@/components/ui/button"
 import Hambuger from "./ui/HambugerBtn"
 import Image, { StaticImageData } from "next/image"
 import logo from "@/assets/FuziondotLogoNew.svg"
+import { SideNavItem } from "./navigation/SideNavItem"
 
-interface subItem{
+export interface subItem{
   title:string,
   href:string
 }
 
-interface navs{
+export interface navs{
   title:string,
   href?: string,
   items?:subItem[]
@@ -25,15 +26,23 @@ const navData: navs[] = [
     title: "Services",
     items: [
       {
-        title: "SEO",
+        title: "Search Engine Optimization (SEO)",
         href: "",
       },
       {
-        title: "SEO",
+        title: "Social media management",
         href: "",
       },
       {
-        title: "SEO",
+        title: "Content Marketing",
+        href: "",
+      },
+      {
+        title: "Web Development",
+        href: "",
+      },
+      {
+        title: "E-commerce Specialist",
         href: "",
       },
     ],
@@ -74,6 +83,47 @@ const navData: navs[] = [
 ];
 
 export function NavbarComponent() {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const navbarRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLLabelElement>(null); 
+
+
+  // Toggle the body scroll based on navbar visibility
+  useEffect(() => {
+    if (isNavbarOpen) {
+      document.body.style.overflowY = "hidden"; // Lock scroll
+    } else {
+      document.body.style.overflowY = "auto"; // Unlock scroll
+    }
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [isNavbarOpen]);
+
+  // Close navbar if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node) && 
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(event.target as Node)
+      ) {
+        setIsNavbarOpen(false);
+      }
+    };
+
+    if (isNavbarOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isNavbarOpen]);
+
   return (
     <nav className=' bg-white flex items-center justify-between px-6 py-5 md:py-7 lg:px-10  max-w-screen-2xl mx-auto '>
       <Logo logo={logo} />
@@ -97,11 +147,14 @@ export function NavbarComponent() {
           Sign up free →
         </Button>
         {/* hambuger btn for small screen */}
-        <Hambuger />
+        <Hambuger checked={isNavbarOpen} action={setIsNavbarOpen} />
       </div>
 
       {/* sidenav for smaller screens */}
-    {/* <SideNav  navItems={navData}/>  */}
+      {
+isNavbarOpen &&  (<SideNav ref={navbarRef} navItems={navData}/>) 
+      }
+    
     </nav>
   );
 }
@@ -189,9 +242,9 @@ function Logo({ logo }:{ logo : StaticImageData}){
   )
 }
 // side nav
-function SideNav({ navItems }: { navItems : navs[]}){
+function SideNav({ navItems, ref }: { navItems : navs[], ref: React.LegacyRef<HTMLElement>}){
   return(
-    <aside className=" z-50 absolute bg-white min-h-screen min-w-[200px] w-[50%]  left-0 -bottom-20 pt-2">
+    <aside ref={ref} className=" z-50 absolute bg-white min-h-screen min-w-[200px] w-[50%]  left-0 -bottom-20 pt-2">
        <SideNavItems items={navItems}/>
        <div className="bg-blue-500 h"></div>
     </aside>
@@ -203,48 +256,12 @@ function SideNavItems({ items }: { items : navs[]}){
   return(
     <>
       <div className=" my-5 mx-5 text-gray-700 text-sm">
-        {items.map((item)=>{
-        if (item.href) {
-          return(
-            <Link key={item.title} href={item.href} className=" font-semibold  flex h-11 justify-between items-center border-b">
-            {item.title}
-          </Link>
-          )
-        } else {
-          return (
-            <div className='relative'>
-              <button className=' font-semibold w-full  flex h-11 justify-between items-center border-b'>
-                {item.title}
-                <ChevronDown className='w-4 absolute right-5' />
-              </button>
-              <div className="  w-[90%] mx-auto -right-[80%] ">
-                {
-                  item.items?.map((sub)=>{
-                    return(
-                      <Link key={sub.title} href={sub.href} className=" font-semibold  text-xs flex h-11 justify-between items-center border-b">
-                      {sub.title}
-                    </Link>
-                    )
-                  })
-                }
-              </div>
-            </div>
-          );
-         
-        }
+        {items.map((item, index)=>{
+        return(
+          <SideNavItem item={item} key={index}/>
+        )
         })}
         
-        {/* <Link className=" font-semibold  flex h-11 justify-between items-center border-b">
-          SEO
-          <ChevronDown className="w-4 absolute right-5"/>
-        </Link>
-        <Link className=" font-semibold  flex h-11 justify-between items-center border-b">
-          SEO
-        </Link>
-        <Link className=" font-semibold  flex h-11 justify-between items-center border-b">
-          SEO
-          <ChevronDown className="w-4 absolute right-5"/>
-        </Link> */}
       </div>
     </>
   )

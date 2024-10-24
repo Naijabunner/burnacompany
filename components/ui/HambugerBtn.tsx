@@ -1,8 +1,8 @@
 import React from "react";
 
-const Hambuger = () => {
+const Hambuger = ({checked, action}: {checked :boolean, action:any}) => {
   return (
-    <label className='hamburger lg:hidden'>
+    <label className='hamburger lg:hidden' onClick={()=>action(!checked)}>
       <input type='checkbox' />
       <svg viewBox='0 0 32 32'>
         <path
