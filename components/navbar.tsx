@@ -46,8 +46,8 @@ const navData: navs[] = [
     title: "Our Company",
     items: [
       {
-        title: "SEO",
-        href: "",
+        title: "FAQ",
+        href: "/Faq",
       },
       {
         title: "SEO",
@@ -175,7 +175,7 @@ function NavItem({ title, href, items }: navs) {
             <Link
               key={index}
               href={item.href}
-              className="block px-4 py-2 text-sm font-medium  text-black hover:bg-purple-400 hover:text-gray-900"
+              className="block px-4 py-3 text-sm font-semibold  text-black hover:bg-black hover:bg-opacity-5 hover:text-primary hover:text-gray-900"
               role="menuitem"
             >
               {item.title}
