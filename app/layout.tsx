@@ -4,23 +4,13 @@ import { NavbarComponent } from "@/components/navbar";
 import { Gothic_A1 } from 'next/font/google';
 import Footer from "@/components/Features/Footer/Footer";
 import { companyLinks, CommunityLinks} from "@/lib/data";
+import PageLoader from "./progressBar";
 
 const gothicA1 = Gothic_A1({
   subsets:['latin'],
   weight:['200','300','400','500','600','700','800', '900'],
   display:'swap',
  })
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${gothicA1.className} overflow-x-hidden  antialiased`}>
+        <PageLoader>
         <NavbarComponent />
         {children}
         <Footer companyLinks={companyLinks} CommunityLinks={CommunityLinks}  />
+        </PageLoader>
       </body>
     </html>
   );

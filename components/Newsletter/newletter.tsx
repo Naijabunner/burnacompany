@@ -1,41 +1,38 @@
-import React from 'react'
-import { Button } from '../ui/button'
-import Image from 'next/image'
-import banner from '@/assets/newsletter_banner.png'
+import React from "react";
+import { Button } from "../ui/button";
+import { Mail, Send } from "lucide-react";
 const Newletter = () => {
   return (
     <section>
-  <div className=" overflow-hidden section relative w-full min-h-[600px]  bg-[#9896ff] px-10 flex justify-center items-center ">
-    <div className="main z-10  w-full lg:mx-auto max-md:flex-col flex justify-between items-center">
-      <h6 className=' text-4xl text-white !leading-[66px] font-semibold max-w-[150px]'>
-        Join our Newsletter
-      </h6>
-      <div className=" flex w-full h-full justify-center flex-col items-end gap-y-4 ">
-        <p className=' max-w-[500px] text-white text-base font-medium leading-loose'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus inventore dolorum et veniam praesentium porro magnam esse id officiis exercitationem!
+      <div className=' overflow-hidden section relative w-full min-h-[400px] py-10 md:min-h-[600px]   px-[5%] md:px-10 flex justify-center items-center '>
+        <div className='relative w-full max-w-screen-lg px-[5%] py-10 md:py-20 shadow  bg-white rounded-lg'>
+          <div className=' flex mx-auto w-fit h-full justify-center flex-col items-end gap-y-4  text '>
+            <h6 className=' text-4xl text-black !leading-[66px] font-semibold self-center'>
+              Join our Newsletter
+            </h6>
+            <p className=' max-w-[500px] font-semibold text-slate-500 text-sm md:text-base  leading-loose'>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+              inventore dolorum et veniam more text here !
+            </p>
+            <form className=' flex overflow-hidden max-sm:flex-col max-sm:rounded gap-8 border border-zinc-700 w-full max-w-[500px] p-2 rounded-full '>
+              <input
+                type='email'
+                name='Email'
+                id=''
+                placeholder='Email here'
+                className='max-sm:border-b border-black flex-1  outline-none pl-2 '
+              />
+              <Button className=' bg-primary  text-slate-200 w-[100px] rounded-full '>
+                Subscribe
+              </Button>
+            </form>
+          </div>
+          <Mail className='max-md:hidden absolute -bottom-0 right-0 w-32 h-32 stroke-primary stroke-1 -rotate-45  ' />
+          <Send className='max-sm:hidden absolute -top-16 -left-10 w-44 h-48 stroke-primary stroke-1  ' />
+        </div>
+      </div>{" "}
+    </section>
+  );
+};
 
-        </p>
-         <form className=' flex gap-8 bg-white w-full max-w-[500px] p-2 rounded-full '>
-        <input type="text" name="" id="" className=' flex-1 border-none outline-none pl-2 ' />
-        <Button className=' bg-primary text-white w-[100px] rounded-full '>
-            Subscribe
-        </Button>
-      </form>
-      </div>
-
-    </div>
-    <Image
-    src={banner}
-    alt=''
-    // width={500}
-    // height={500}
-    className='absolute w-full h-[700px] max-w-screen-2xl bg-blend-multiply opacity-80 z-0'
-    />
-  
-
-    </div>  </section>
-  
-  )
-}
-
-export default Newletter
+export default Newletter;

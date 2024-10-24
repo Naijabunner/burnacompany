@@ -147,13 +147,12 @@ export function NavbarComponent() {
           Sign up free →
         </Button>
         {/* hambuger btn for small screen */}
-        <Hambuger checked={isNavbarOpen} action={setIsNavbarOpen} />
+        <Hambuger ref={hamburgerRef} checked={isNavbarOpen} action={setIsNavbarOpen} />
       </div>
 
       {/* sidenav for smaller screens */}
-      {
-isNavbarOpen &&  (<SideNav ref={navbarRef} navItems={navData}/>) 
-      }
+        <SideNav isOpen={isNavbarOpen} ref={navbarRef} navItems={navData}/> 
+      
     
     </nav>
   );
@@ -242,14 +241,15 @@ function Logo({ logo }:{ logo : StaticImageData}){
   )
 }
 // side nav
-function SideNav({ navItems, ref }: { navItems : navs[], ref: React.LegacyRef<HTMLElement>}){
+function SideNav({isOpen, navItems, ref }: {isOpen:boolean, navItems : navs[], ref: React.LegacyRef<HTMLElement>}){
   return(
-    <aside ref={ref} className=" z-50 absolute bg-white min-h-screen min-w-[200px] w-[50%]  left-0 -bottom-20 pt-2">
+    <aside ref={ref} className={ `${!isOpen?"!w-0 ": "min-w-[200px] w-[70%] md:w-[50%]"} transition-all ease-in-out overflow-hidden lg:hidden z-50 absolute bg-white min-h-screen   left-0 -bottom-20 pt-2`}>
        <SideNavItems items={navItems}/>
        <div className="bg-blue-500 h"></div>
     </aside>
  )
 }
+
 // map nav items
 // move item to its own component and it will work 
 function SideNavItems({ items }: { items : navs[]}){

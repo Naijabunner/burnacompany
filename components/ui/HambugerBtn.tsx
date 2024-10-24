@@ -1,9 +1,17 @@
 import React from "react";
 
-const Hambuger = ({checked, action}: {checked :boolean, action:any}) => {
+const Hambuger = ({
+  checked,
+  action,
+  ref
+}: {
+  checked: boolean;
+  action: (value: boolean) => void;
+  ref:React.LegacyRef<HTMLLabelElement> | undefined
+}) => {
   return (
-    <label className='hamburger lg:hidden' onClick={()=>action(!checked)}>
-      <input type='checkbox' />
+    <label className='hamburger lg:hidden' ref={ref}>
+      <input type='checkbox' checked={checked} onChange={() => action(!checked)} />
       <svg viewBox='0 0 32 32'>
         <path
           className='line line-top-bottom'

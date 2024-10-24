@@ -10,7 +10,7 @@ export function SideNavItem({ item }: { item: navs }) {
     return (
       <Link
         href={item.href}
-        className=' font-semibold  flex h-11 justify-between items-center border-b'
+        className=' font-semibold hover:bg-purple-400 hover:pl-5 rounded ease-linear transition-all flex h-11 justify-between items-center border-b'
       >
         {item.title}
       </Link>
@@ -20,7 +20,7 @@ export function SideNavItem({ item }: { item: navs }) {
   return (
     <>
       <div className='relative '>
-        <button onClick={()=>setdropDown(prev => !prev)} className=' font-semibold w-full  flex h-11 justify-between items-center border-b'>
+        <button onClick={()=>setdropDown(prev => !prev)} className=' font-semibold w-full  flex h-11 justify-between items-center border-b hover:bg-purple-400 rounded ease-linear transition-all hover:pl-5'>
           {item.title}
           <ChevronDown className={`${dropDown?'':' -rotate-90'} transition-all ease-linear w-5 h-5 absolute right-5`} />
         </button>
@@ -30,7 +30,7 @@ export function SideNavItem({ item }: { item: navs }) {
               <Link
                 key={sub.title}
                 href={sub.href}
-                className=' font-semibold  text-sm flex h-11 justify-between items-center border-b'
+                className='hover:bg-purple-300 rounded ease-linear transition-all hover:pl-5 font-semibold  text-sm flex h-11 justify-between items-center border-b'
               >
                 {sub.title}
               </Link>
