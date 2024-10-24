@@ -4,8 +4,9 @@ import Image from 'next/image'
 import banner from '@/assets/newsletter_banner.png'
 const Newletter = () => {
   return (
-    <div className=" overflow-hidden section relative w-full min-h-[300px]  bg-[#9896ff] px-10 flex justify-center items-center ">
-    <div className="main z-10 lg:max-w-[1100px] w-full lg:mx-auto max-md:flex-col flex justify-between items-center">
+    <section>
+  <div className=" overflow-hidden section relative w-full min-h-[600px]  bg-[#9896ff] px-10 flex justify-center items-center ">
+    <div className="main z-10  w-full lg:mx-auto max-md:flex-col flex justify-between items-center">
       <h6 className=' text-4xl text-white !leading-[66px] font-semibold max-w-[150px]'>
         Join our Newsletter
       </h6>
@@ -30,7 +31,10 @@ const Newletter = () => {
     // height={500}
     className='absolute w-full h-[700px] max-w-screen-2xl bg-blend-multiply opacity-80 z-0'
     />
-    </div>
+  
+
+    </div>  </section>
+  
   )
 }
 
