@@ -50,8 +50,8 @@ const navData: navs[] = [
         href: "/Faq",
       },
       {
-        title: "SEO",
-        href: "",
+        title: "Help Center",
+        href: "/ContactUs",
       },
       {
         title: "SEO",

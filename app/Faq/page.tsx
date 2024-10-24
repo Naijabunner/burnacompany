@@ -18,7 +18,7 @@ const FAQ = () => {
         className="object-contain sm:mx-auto"
       />
 
-      <div className="mx-auto">
+      <div className="mx-auto mt-9">
         <h1 className="font-extrabold text-2xl">Frequently Asked Questions</h1>
         <Accordion
           type="single"
