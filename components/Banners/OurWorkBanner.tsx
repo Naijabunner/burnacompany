@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 const OurWorkBanner = () => {
   return (
-    <div className='overflow-hidden   bg-primary w-full py-10 h-[500px] '>
+    <div className='overflow-hidden   bg-primary w-full py-10 h-[600px] md:h-[500px] '>
       <div className='wrapper relative  h-full max max-w-screen-2xl mx-auto'>
         <Image
           src={background_vector}
@@ -13,7 +13,7 @@ const OurWorkBanner = () => {
           className='w-full absolute top-0  z-0 '
         />
         <main className='relative gap-y-10 max-w-[1200px] text-white text-center mx-auto z-10 flex flex-col justify-center items-center h-full max-lg:px-[5%] px-10 '>
-          <h4 className=' text-5xl font-semibold'>
+          <h4 className=' text-4xl md:text-5xl font-semibold'>
             Your work, everywhere you are
           </h4>
           <p className=' text-lg font-medium leading-relaxed'>

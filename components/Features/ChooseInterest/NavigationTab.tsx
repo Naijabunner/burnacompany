@@ -13,7 +13,7 @@ type Tabs = {
 
 const NavigationTab: React.FC<Tabs>= ({tabs,activeTab,setActiveTab}) => {
   return (
-    <nav className="flex gap-2 flex-wrap mt-5">
+    <nav className="flex gap-2 flex-wrap mt-5 bg-white p-5 rounded-lg">
       {tabs.map((tab) => (
         <div
           key={tab.name}

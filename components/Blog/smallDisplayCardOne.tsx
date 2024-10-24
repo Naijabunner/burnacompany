@@ -11,7 +11,9 @@ const SmallDisplayCardOne = () => {
     <Image
     src={testImage}
     alt=''
-    className='h-full w-full  object-cover '
+    width={300}
+    height={300}
+    className='h-full w-full bg-slate-500 object-cover '
    
     />
     </div>

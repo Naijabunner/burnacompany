@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gothicA1.className}  antialiased`}>
+      <body className={`${gothicA1.className} overflow-x-hidden  antialiased`}>
         <NavbarComponent />
         {children}
         <Footer companyLinks={companyLinks} CommunityLinks={CommunityLinks}  />

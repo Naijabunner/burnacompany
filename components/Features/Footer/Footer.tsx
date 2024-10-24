@@ -13,7 +13,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ companyLinks, CommunityLinks }) => {
   return (
-    <footer className=" flex flex-col   justify-center gap-16 p-24 max-md:px-5 ">
+    <footer className=" flex flex-col bg-white  justify-center gap-16 p-24 max-md:px-5 ">
       <div className="flex flex-wrap justify-between ml-10 gap-20 ">
         <Logo />
         <FooterColumn title="Quick Link" links={companyLinks} />

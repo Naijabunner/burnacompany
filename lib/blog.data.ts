@@ -3,24 +3,7 @@ import testImageTwo from "@/assets/testImageTwo.webp"
 const text =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est quia, ducimus totam nisi tempore corporis amet expedita? Rerum, sint, repellat temporibus fugiat minima odio sapiente officia officiis voluptas neque quae deserunt soluta, velit molestias suscipit labore dolorum accusamus consequuntur! Tenetur magnam nobis quae ut, dolore dolorum sint repellat. Odio deserunt, distinctio et impedit accusantium odit nam praesentium facilis perspiciatis! Soluta, officia asperiores veritatis debitis sequi voluptatum deserunt ullam omnis dolor fuga quo libero obcaecati voluptas labore ea at excepturi animi a sit? Est atque explicabo non asperiores eligendi, quam numquam distinctio odio quaerat ad neque natus in tempora eos!";
 
-  export const categories =[
-    {
-        title:'Digital marketing',
-        url:'',
-    },
-    {
-        title:'Seo',
-        url:'',
-    },
-    {
-        title:'Content management',
-        url:'',
-    },
-    {
-        title:'Tips',
-        url:'',
-    },
-  ] 
+
 
   export const blogs = [
   {

@@ -5,6 +5,8 @@ import ginger3 from '@/Assets/shared/topic-research.svg'
 import location from '@/Assets/shared/icons8-location-24.png'
 import message from '@/Assets/shared/icons8-message-50.png'
 import telephone from '@/Assets/shared/icons8-telephone-32.png'
+import { Binoculars, Lightbulb, Megaphone, SquareChartGantt } from 'lucide-react'
+
 import { StaticImageData } from 'next/image'
 interface dataItem  {
     keyword: string,
@@ -148,13 +150,28 @@ export const data: dataItem[] = [
     },
 ]
 
-
-export const categories:string[]=[
-    "Catgory",
-    "Catgory",
-    "Catgory",
-    "Catgory",
-]
+     export const categories=[
+     {
+       label:'Digital marketing',
+       value:'Digital',
+       icon:Megaphone
+     },
+     {
+       label:'SEO',
+       value:'SEO',
+       icon:Binoculars
+     },
+     {
+       label:'Content management',
+       value:'Content_mgt',
+       icon:SquareChartGantt
+     },
+     {
+       label:'Tips',
+       value:'Tips',
+       icon: Lightbulb
+     }
+   ]
 
 export const companyLinks = [
     'Popular Service',
