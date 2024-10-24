@@ -27,10 +27,9 @@ const Logo: React.FC<LogoProps> = ({ variant = "default" }) => {
       <Image
         loading="lazy"
         src={LogoIcon}
-        className={`object-contain ${logoClass}`}
+        className={`object-contain`}
         alt="PostPilot Logo"
-        width={20}
-        height={20}
+        width={150}
       />
       <p className="text-sm mt-7">
         Sed perspiciatis unde omnis natus doloremque laudantium totae
@@ -40,7 +39,7 @@ const Logo: React.FC<LogoProps> = ({ variant = "default" }) => {
         {socialIcons.map((icon, index) => (
           <div
             key={index}
-            className="flex justify-center border w-8 h-8 rounded-full bg-primary"
+            className="flex justify-center border w-10 h-10 rounded-full bg-primary hover:bg-light"
           >
             <Image
               loading="lazy"
