@@ -55,7 +55,7 @@ const page = () => {
        console.log(values);
      }
   return (
-    <div>
+    <div className="my-11">
       <div className="text-center my-11 max-w-[1560px] mx-auto">
         <h1 className="font-bold text-2xl">Contact Us</h1>
         <p className="text-[#717171] font-semibold">
